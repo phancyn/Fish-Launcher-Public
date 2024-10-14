@@ -1,0 +1,35 @@
+﻿<Application x:Class="LaucnherYouTube.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LaucnherYouTube"
+             Startup="StartUpArgumentsInitialMethod">
+    
+    <Application.Resources>
+
+        <LinearGradientBrush x:Key="BackgroundWindows" EndPoint="0.5,1" StartPoint="0.5,0">
+            <LinearGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                    <RotateTransform Angle="402.274" CenterX="0.5" CenterY="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </LinearGradientBrush.RelativeTransform>
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF000117"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ButtonBackgroundGlobal" Color="Black"/>
+        <LinearGradientBrush x:Key="ButtonBackgroundGlobals" EndPoint="0.5,1" StartPoint="0.5,0">
+            <LinearGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                    <RotateTransform Angle="402.274" CenterX="0.5" CenterY="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </LinearGradientBrush.RelativeTransform>
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF000117"/>
+        </LinearGradientBrush>
+    </Application.Resources>
+</Application>

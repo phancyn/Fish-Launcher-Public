@@ -1,0 +1,112 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|d:\\.project\\.git\\launcher_fish\\fishlauncher\\sourcecode\\laucnheryoutube\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|solutionrelative:laucnheryoutube\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\laucnheryoutube\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|solutionrelative:laucnheryoutube\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|LaucnherYouTube||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\laucnheryoutube\\splash.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|solutionrelative:laucnheryoutube\\splash.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\laucnheryoutube\\splash.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|solutionrelative:laucnheryoutube\\splash.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F0926CF-7443-4969-83AB-E69064507FB9}|LaucnherYouTube\\LaucnherYouTube.csproj|d:\\.project\\.git\\launcher_fish\\fishlauncher\\sourcecode\\laucnheryoutube\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "LaucnherYouTube\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\MainWindow.xaml.cs",
+              "RelativeToolTip": "LaucnherYouTube\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAMYBAAAAAAAAAAAQwNkBAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T15:53:50.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "LaucnherYouTube\\MainWindow.xaml",
+              "ToolTip": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\MainWindow.xaml",
+              "RelativeToolTip": "LaucnherYouTube\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-26T12:48:47.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Splash.xaml.cs",
+              "DocumentMoniker": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\Splash.xaml.cs",
+              "RelativeDocumentMoniker": "LaucnherYouTube\\Splash.xaml.cs",
+              "ToolTip": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\Splash.xaml.cs",
+              "RelativeToolTip": "LaucnherYouTube\\Splash.xaml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwDYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T12:52:26.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Splash.xaml",
+              "DocumentMoniker": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\Splash.xaml",
+              "RelativeDocumentMoniker": "LaucnherYouTube\\Splash.xaml",
+              "ToolTip": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\Splash.xaml",
+              "RelativeToolTip": "LaucnherYouTube\\Splash.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-26T12:52:04.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LaucnherYouTube",
+              "DocumentMoniker": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\LaucnherYouTube.csproj",
+              "RelativeDocumentMoniker": "LaucnherYouTube\\LaucnherYouTube.csproj",
+              "ToolTip": "D:\\.project\\.git\\Launcher_Fish\\FishLauncher\\SourceCode\\LaucnherYouTube\\LaucnherYouTube.csproj",
+              "RelativeToolTip": "LaucnherYouTube\\LaucnherYouTube.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-26T12:40:25.734Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

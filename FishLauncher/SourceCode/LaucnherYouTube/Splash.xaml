@@ -1,0 +1,24 @@
+﻿<Window x:Class="LaucnherYouTube.Splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaucnherYouTube"
+        mc:Ignorable="d"
+        Title="" Height="256" Width="344" Background="Black" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Image x:Name="YourImage" Source="/res/Mister Proper pisdabol Fish.png" Width="200" Height="200" />
+        <TextBlock x:Name="SendersArgumentsTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,275,0,0"><Run Text="Loading"/><LineBreak/><Run/></TextBlock>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF151515"/>
+                <GradientStop Color="#FF1F1F1F" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+    </Grid>
+</Window>
