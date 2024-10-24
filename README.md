@@ -23,7 +23,7 @@ fish launcher It is installed very easily in several stages
 
 1. **Click Code**
 
-   
+<img src="img(don't open)/Step 1.gif">
 
 
 
