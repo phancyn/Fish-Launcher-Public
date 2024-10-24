@@ -23,7 +23,7 @@
 
 2. **Fish Settings**
 
-<b1>Let's make a text document where the game version will be</b1>
+Let's make a text document where the game version will be
 
    
 
