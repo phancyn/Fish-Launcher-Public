@@ -23,7 +23,17 @@
 
 2. **Fish Settings**
 
-Let's make a text document where the game version will be
+Let's make a xml file where the game version will be
+
+'''
+<?xml version="1.0" encoding="utf-8"?>
+<XMLFILE>
+<Main>
+  <version>2.7</version>
+</Main>
+</XMLFILE>
+'''
+
 
    
 
