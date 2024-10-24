@@ -18,7 +18,7 @@ Updater for game
 
 <a href="https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=zoxide_20231001">
   <div>
-    <img src="img(don't open)/banner.png" width="1280" height="230" alt="Warp" />
+    <img src="img(don't open)/banner.png" alt="Warp" />
   </div>
   <b>
     Warp is a modern, Rust-based terminal with AI built in so you and your team
