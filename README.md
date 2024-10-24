@@ -23,157 +23,108 @@
 
 2. **Fish Settings**
 
-Let's make a xml file where the game version will be
-
-'<?xml version="1.0" encoding="utf-8"?>
- <XMLFILE>
- <Main>
-    <version>2.7</version>
- </Main>
- </XMLFILE>'
+> [!TIP]
+> Let's make a xml file where the game version will be
+<a href="https://github.com/phancyn/Fish-Launcher-Public/blob/main/FishLauncher/versionServer.xml">XML File</a>
 
 
+```C#
+MainWindow.xaml.cs
+{
+87. WebClient client = new WebClient();
+88. client.DownloadFileCompleted += CompleteDownloadVersionXMLServer;
+89. client.DownloadFileAsync(new Uri("link on xml file"), "Assets/versionServer.xml");
+90. ServerConnecting.Text = "СЕРВЕР ДОСТУПЕН!";
+}
+```
+> [!TIP]
+> Where it says link on xml file, we enter a link to the file there. it can be installed automatically, for example, Google Drive
+
+```c#
+MainWindow.xaml.cs
+280.        public void NightDay(object sender, RoutedEventArgs e)
+281.        {
+282.            // Замените URL на нужную вам ссылку
+283.            string url = "https://vk.com/market/product/enemy-night-227048711-9921519";
+284.
+285.            try
+286.            {
+287.                // Открываем ссылку в браузере по умолчанию
+288.                Process.Start(new ProcessStartInfo
+289.                {
+290.                    FileName = url,
+291.                    UseShellExecute = true
+292.                });
+293.            }
+294.            catch (Exception ex)
+295.            {
+296.                MessageBox.Show($"Не удалось открыть ссылку: {ex.Message}");
+297.            }
+298.        }
+```
+>[!TIP]
+>You can replace in line 283 here string url = "You can insert your link to the second game or delete it"
 
 
 
-   
+```C#
+MainWindow.xaml.cs
+147.  private void ButtonLaunchGame(object sender, RoutedEventArgs rea)
+148.        {
+149.            try
+150.            {
+151.                processApp = new Process();
+152.                processApp.StartInfo.UseShellExecute = false;
+153.                processApp.StartInfo.FileName = @"Build\Name Game.exe";
+154.                processApp.StartInfo.Arguments = ArgumentsAppString;
+155.                processApp.Start();
+156.                idProcessApp = processApp.Id;
+157.            }
+158.            catch (Exception e)
+159.            {
+160.                LoggingProcessJobs("EXCEPTION" + e.Message.ToString());
+161.            }
+162.        }
+```
+>[!TIP]
+> 153.                processApp.StartInfo.FileName = @"Build\Name Game.exe"; Replace "Name Game.exe " on your game launch
 
-3. **GREAT** <sup>(optional)</sup>
+```c#
+MainWindow.xaml.cs
+389.                Task downloadFileHTTP = Task.Run(async () =>
+390.              {
+391.                    HttpRequestMessage httpRequestMessage = new HttpRequestMessage() { Method = HttpMethod.Get, RequestUri = new Uri("a link to download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too") };
+392.                    ProgressMessageHandler progressMessageHandler = new ProgressMessageHandler(new HttpClientHandler() { AllowAutoRedirect = true });
+393.                    httpClient = new HttpClient(progressMessageHandler) { Timeout = Timeout.InfiniteTimeSpan };
+394.                    stopWatch.Start();
+395.                    progressMessageHandler.HttpReceiveProgress += ProgressMessageHandler_HttpReceiveProgress;
+396.                    Stream streamFileServer = await httpClient.GetStreamAsync(httpRequestMessage.RequestUri);
+397.                    Stream fileStreamServer = new FileStream(zipPath, FileMode.OpenOrCreate, FileAccess.Write);
+398.                    try
+399.                    {
+400.                        await streamFileServer.CopyToAsync(fileStreamServer, ArgumentsAppSpeedDownload, cancellationToken);
+401.                        cancelTokenSource.Dispose();
+402.                        streamFileServer.Dispose();
+403.                        fileStreamServer.Dispose();
+404.                        return;
+405.                    }
+406.                    catch (Exception e)
+407.                    {
+408.                        DownloadAppState.Dispatcher.Invoke(() => DownloadAppState.Text = "Состояние: " + e.Message.ToString());
+409.                        cancelTokenSource.Dispose();
+410.                        streamFileServer.Dispose();
+411.                        fileStreamServer.Dispose();
+412.                        return;
+413.                    }
+414.                }, cancellationToken);
+```
+>[!TIP]
+>391.  HttpRequestMessage httpRequestMessage = new HttpRequestMessage() { Method = HttpMethod.Get, RequestUri = new Uri("a link to download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too") }; Replace this line with "a link to >download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too" to the Google link, the links are direct so that the installation starts immediately, you will need the Google drive API
 
-   If you currently use any of these plugins, you may want to import your data
-   into zoxide:
 
-   <details>
-   <summary>autojump</summary>
+3. **GREAT** 
+>[!TIP]
+>Ready! now your launcher is ready to work, change the design, background and so on in xaml
 
-   > Run this command in your terminal:
-   >
-   > ```sh
-   > zoxide import --from=autojump "/path/to/autojump/db"
-   > ```
-   >
-   > The path usually varies according to your system:
-   >
-   > | OS      | Path                                                                                 | Example                                                |
-   > | ------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-   > | Linux   | `$XDG_DATA_HOME/autojump/autojump.txt` or `$HOME/.local/share/autojump/autojump.txt` | `/home/alice/.local/share/autojump/autojump.txt`       |
-   > | macOS   | `$HOME/Library/autojump/autojump.txt`                                                | `/Users/Alice/Library/autojump/autojump.txt`           |
-   > | Windows | `%APPDATA%\autojump\autojump.txt`                                                    | `C:\Users\Alice\AppData\Roaming\autojump\autojump.txt` |
-
-   </details>
-
-   <details>
-   <summary>fasd, z, z.lua, zsh-z</summary>
-
-   > Run this command in your terminal:
-   >
-   > ```sh
-   > zoxide import --from=z "path/to/z/db"
-   > ```
-   >
-   > The path usually varies according to your system:
-   >
-   > | Plugin           | Path                                                                                |
-   > | ---------------- | ----------------------------------------------------------------------------------- |
-   > | fasd             | `$_FASD_DATA` or `$HOME/.fasd`                                                      |
-   > | z (bash/zsh)     | `$_Z_DATA` or `$HOME/.z`                                                            |
-   > | z (fish)         | `$Z_DATA` or `$XDG_DATA_HOME/z/data` or `$HOME/.local/share/z/data`                 |
-   > | z.lua (bash/zsh) | `$_ZL_DATA` or `$HOME/.zlua`                                                        |
-   > | z.lua (fish)     | `$XDG_DATA_HOME/zlua/zlua.txt` or `$HOME/.local/share/zlua/zlua.txt` or `$_ZL_DATA` |
-   > | zsh-z            | `$ZSHZ_DATA` or `$_Z_DATA` or `$HOME/.z`                                            |
-
-   </details>
-
-   <details>
-   <summary>ZLocation</summary>
-
-   > Run this command in PowerShell:
-   >
-   > ```powershell
-   > $db = New-TemporaryFile
-   > (Get-ZLocation).GetEnumerator() | ForEach-Object { Write-Output ($_.Name+'|'+$_.Value+'|0') } | Out-File $db
-   > zoxide import --from=z $db
-   > ```
-
-   </details>
-
-## Configuration
-
-### Flags
-
-When calling `zoxide init`, the following flags are available:
-
-- `--cmd`
-  - Changes the prefix of the `z` and `zi` commands.
-  - `--cmd j` would change the commands to (`j`, `ji`).
-  - `--cmd cd` would replace the `cd` command.
-- `--hook <HOOK>`
-  - Changes how often zoxide increments a directory's score:
-    | Hook            | Description                       |
-    | --------------- | --------------------------------- |
-    | `none`          | Never                             |
-    | `prompt`        | At every shell prompt             |
-    | `pwd` (default) | Whenever the directory is changed |
-- `--no-cmd`
-  - Prevents zoxide from defining the `z` and `zi` commands.
-  - These functions will still be available in your shell as `__zoxide_z` and
-    `__zoxide_zi`, should you choose to redefine them.
-
-### Environment variables
-
-Environment variables[^2] can be used for configuration. They must be set before
-`zoxide init` is called.
-
-- `_ZO_DATA_DIR`
-  - Specifies the directory in which the database is stored.
-  - The default value varies across OSes:
-    | OS          | Path                                     | Example                                    |
-    | ----------- | ---------------------------------------- | ------------------------------------------ |
-    | Linux / BSD | `$XDG_DATA_HOME` or `$HOME/.local/share` | `/home/alice/.local/share`                 |
-    | macOS       | `$HOME/Library/Application Support`      | `/Users/Alice/Library/Application Support` |
-    | Windows     | `%LOCALAPPDATA%`                         | `C:\Users\Alice\AppData\Local`             |
-- `_ZO_ECHO`
-  - When set to 1, `z` will print the matched directory before navigating to
-    it.
-- `_ZO_EXCLUDE_DIRS`
-  - Excludes the specified directories from the database.
-  - This is provided as a list of [globs][glob], separated by OS-specific
-    characters:
-    | OS                  | Separator | Example                 |
-    | ------------------- | --------- | ----------------------- |
-    | Linux / macOS / BSD | `:`       | `$HOME:$HOME/private/*` |
-    | Windows             | `;`       | `$HOME;$HOME/private/*` |
-  - By default, this is set to `"$HOME"`.
-- `_ZO_FZF_OPTS`
-  - Custom options to pass to [fzf] during interactive selection. See
-    [`man fzf`][fzf-man] for the list of options.
-- `_ZO_MAXAGE`
-  - Configures the [aging algorithm][algorithm-aging], which limits the maximum
-    number of entries in the database.
-  - By default, this is set to 10000.
-- `_ZO_RESOLVE_SYMLINKS`
-  - When set to 1, `z` will resolve symlinks before adding directories to the
-    database.
-
-## Third-party integrations
-
-| Application           | Description                                  | Plugin                     |
-| --------------------- | -------------------------------------------- | -------------------------- |
-| [aerc]                | Email client                                 | Natively supported         |
-| [alfred]              | macOS launcher                               | [alfred-zoxide]            |
-| [clink]               | Improved cmd.exe for Windows                 | [clink-zoxide]             |
-| [emacs]               | Text editor                                  | [zoxide.el]                |
-| [felix]               | File manager                                 | Natively supported         |
-| [joshuto]             | File manager                                 | Natively supported         |
-| [lf]                  | File manager                                 | See the [wiki][lf-wiki]    |
-| [nnn]                 | File manager                                 | [nnn-autojump]             |
-| [ranger]              | File manager                                 | [ranger-zoxide]            |
-| [telescope.nvim]      | Fuzzy finder for Neovim                      | [telescope-zoxide]         |
-| [t]                   | `tmux` session manager                       | Natively supported         |
-| [tmux-session-wizard] | `tmux` session manager                       | Natively supported         |
-| [vim] / [neovim]      | Text editor                                  | [zoxide.vim]               |
-| [xplr]                | File manager                                 | [zoxide.xplr]              |
-| [xxh]                 | Transports shell configuration over SSH      | [xxh-plugin-prerun-zoxide] |
-| [yazi]                | File manager                                 | Natively supported         |
-| [zabb]                | Finds the shortest possible query for a path | Natively supported         |
-| [zsh-autocomplete]    | Realtime completions for zsh                 | Natively supported         |
+> [!WARNING]
+> You cannot change the Fish icon and the logo at the top
