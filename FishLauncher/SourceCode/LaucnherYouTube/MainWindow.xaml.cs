@@ -87,7 +87,7 @@ namespace LaucnherYouTube
                 {
                     WebClient client = new WebClient();
                     client.DownloadFileCompleted += CompleteDownloadVersionXMLServer;
-                    client.DownloadFileAsync(new Uri("Сюда ссылку на версию"), "Assets/versionServer.xml");
+                    client.DownloadFileAsync(new Uri("link on xml file"), "Assets/versionServer.xml");
                     ServerConnecting.Text = "СЕРВЕР ДОСТУПЕН!";
                 }
             }
@@ -388,7 +388,7 @@ namespace LaucnherYouTube
                 CancellationToken cancellationToken = cancelTokenSource.Token;
                 Task downloadFileHTTP = Task.Run(async () =>
                 {
-                    HttpRequestMessage httpRequestMessage = new HttpRequestMessage() { Method = HttpMethod.Get, RequestUri = new Uri("ссылку на скачивание игры (главное чтоб был файл .zip с названием Build и папка где будет игра тоже") };
+                    HttpRequestMessage httpRequestMessage = new HttpRequestMessage() { Method = HttpMethod.Get, RequestUri = new Uri("a link to download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too") };
                     ProgressMessageHandler progressMessageHandler = new ProgressMessageHandler(new HttpClientHandler() { AllowAutoRedirect = true });
                     httpClient = new HttpClient(progressMessageHandler) { Timeout = Timeout.InfiniteTimeSpan };
                     stopWatch.Start();
