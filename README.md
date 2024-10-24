@@ -14,13 +14,6 @@
 </div>
 
 
-
-
-
-## Installation
-
-fish launcher It is installed very easily in several stages
-
 1. **Click Code**
 
 <img src="img(don't open)/Step 1.gif">
@@ -28,142 +21,13 @@ fish launcher It is installed very easily in several stages
 
 
 
-2. **Setup Fish and Settings**
+2. **Fish Settings**
 
-   To start using zoxide, add it to your shell.
+<h2>Let's make a text document where the game version will be</h2>
 
-   <details>
-   <summary>Bash</summary>
+   
 
-   > Add this to the <ins>**end**</ins> of your config file (usually `~/.bashrc`):
-   >
-   > ```sh
-   > eval "$(zoxide init bash)"
-   > ```
-
-   </details>
-
-   <details>
-   <summary>Elvish</summary>
-
-   > Add this to the <ins>**end**</ins> of your config file (usually `~/.elvish/rc.elv`):
-   >
-   > ```sh
-   > eval (zoxide init elvish | slurp)
-   > ```
-   >
-   > **Note**
-   > zoxide only supports elvish v0.18.0 and above.
-
-   </details>
-
-   <details>
-   <summary>Fish</summary>
-
-   > Add this to the <ins>**end**</ins> of your config file (usually
-   > `~/.config/fish/config.fish`):
-   >
-   > ```sh
-   > zoxide init fish | source
-   > ```
-
-   </details>
-
-   <details>
-   <summary>Ksh</summary>
-
-   > Add this to the <ins>**end**</ins> of your config file (usually `~/.kshrc`):
-   >
-   > ```sh
-   > # ksh93
-   > eval "$(zoxide init ksh)"
-   >
-   > # mksh, oksh, etc.
-   > eval "$(zoxide init ksh --hook=prompt)"
-   > ```
-
-   </details>
-
-   <details>
-   <summary>Nushell</summary>
-
-   > Add this to the <ins>**end**</ins> of your env file (find it by running `$nu.env-path`
-   > in Nushell):
-   >
-   > ```sh
-   > zoxide init nushell | save -f ~/.zoxide.nu
-   > ```
-   >
-   > Now, add this to the <ins>**end**</ins> of your config file (find it by running
-   > `$nu.config-path` in Nushell):
-   >
-   > ```sh
-   > source ~/.zoxide.nu
-   > ```
-   >
-   > **Note**
-   > zoxide only supports Nushell v0.89.0+.
-
-   </details>
-
-   <details>
-   <summary>PowerShell</summary>
-
-   > Add this to the <ins>**end**</ins> of your config file (find it by running
-   > `echo $profile` in PowerShell):
-   >
-   > ```powershell
-   > Invoke-Expression (& { (zoxide init powershell | Out-String) })
-   > ```
-
-   </details>
-
-   <details>
-   <summary>Xonsh</summary>
-
-   > Add this to the <ins>**end**</ins> of your config file (usually `~/.xonshrc`):
-   >
-   > ```python
-   > execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
-   > ```
-
-   </details>
-
-   <details>
-   <summary>Zsh</summary>
-
-   > Add this to the <ins>**end**</ins> of your config file (usually `~/.zshrc`):
-   >
-   > ```sh
-   > eval "$(zoxide init zsh)"
-   > ```
-   >
-   > For completions to work, the above line must be added _after_ `compinit` is
-   > called. You may have to rebuild your completions cache by running
-   > `rm ~/.zcompdump*; compinit`.
-
-   </details>
-
-   <details>
-   <summary>Any POSIX shell</summary>
-
-   > Add this to the <ins>**end**</ins> of your config file:
-   >
-   > ```sh
-   > eval "$(zoxide init posix --hook prompt)"
-   > ```
-
-   </details>
-
-3. **Install fzf** <sup>(optional)</sup>
-
-   [fzf] is a command-line fuzzy finder, used by zoxide for completions /
-   interactive selection. It can be installed from [here][fzf-installation].
-
-   > **Note**
-   > zoxide only supports fzf v0.33.0 and above.
-
-4. **Import your data** <sup>(optional)</sup>
+3. **GREAT** <sup>(optional)</sup>
 
    If you currently use any of these plugins, you may want to import your data
    into zoxide:
