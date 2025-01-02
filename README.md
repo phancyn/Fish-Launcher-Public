@@ -13,9 +13,11 @@
 
 <div id="english">
 1. **Click Code**
-
+&nbsp;
+&nbsp;
+&nbsp;
 <img src="img(don't open)/Step 1.gif">
-
+&nbsp;
 
 
 
@@ -131,10 +133,11 @@ MainWindow.xaml.cs
 
 <div id="русский">
 1. **Нажмите на Code**
-
+&nbsp;
+&nbsp;
+&nbsp;
 <img src="img(don't open)/Step 1.gif">
-
-
+&nbsp;
 
 
 2. **Настройка Fish**
