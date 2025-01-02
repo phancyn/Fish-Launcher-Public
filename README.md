@@ -23,7 +23,7 @@
 
 2. **Fish Settings**
 
-> [!TIP]
+
 > Let's make a xml file where the game version will be
 <a href="https://github.com/phancyn/Fish-Launcher-Public/blob/main/FishLauncher/versionServer.xml">XML File</a>
 
@@ -37,7 +37,7 @@ MainWindow.xaml.cs
 90. ServerConnecting.Text = "СЕРВЕР ДОСТУПЕН!";
 }
 ```
-> [!TIP]
+
 > Where it says link on xml file, we enter a link to the file there. it can be installed automatically, for example, Google Drive
 
 ```c#
