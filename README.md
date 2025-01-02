@@ -62,7 +62,7 @@ MainWindow.xaml.cs
 297.            }
 298.        }
 ```
->[!TIP]
+
 >You can replace in line 283 here string url = "You can insert your link to the second game or delete it"
 
 
@@ -86,7 +86,7 @@ MainWindow.xaml.cs
 161.            }
 162.        }
 ```
->[!TIP]
+
 > 153.                processApp.StartInfo.FileName = @"Build\Name Game.exe"; Replace "Name Game.exe " on your game launch
 
 ```c#
@@ -118,12 +118,12 @@ MainWindow.xaml.cs
 413.                    }
 414.                }, cancellationToken);
 ```
->[!TIP]
+
 >391.  HttpRequestMessage httpRequestMessage = new HttpRequestMessage() { Method = HttpMethod.Get, RequestUri = new Uri("a link to download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too") }; Replace this line with "a link to >download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too" to the Google link, the links are direct so that the installation starts immediately, you will need the Google drive API
 
 
 3. **GREAT** 
->[!TIP]
+
 >Ready! now your launcher is ready to work, change the design, background and so on in xaml
 
 > [!WARNING]
@@ -142,7 +142,7 @@ MainWindow.xaml.cs
 
 2. **Настройка Fish**
 
-> [!TIP]
+
 > Давайте создадим xml файл, где будет версия игры
 <a href="https://github.com/phancyn/Fish-Launcher-Public/blob/main/FishLauncher/versionServer.xml">XML Файл</a>
 
@@ -156,7 +156,7 @@ MainWindow.xaml.cs
 90. ServerConnecting.Text = "СЕРВЕР ДОСТУПЕН!";
 }
 ```
-> [!TIP]
+
 > Где говорится link on xml file, мы вводим ссылку на файл. он может быть установлен автоматически, например, Google Drive
 
 ```c#
@@ -181,7 +181,7 @@ MainWindow.xaml.cs
 297.            }
 298.        }
 ```
->[!TIP]
+
 >Вы можете заменить в строке 283 здесь string url = "Вы можете вставить ссылку на вторую игру или удалить её"
 
 
@@ -205,7 +205,7 @@ MainWindow.xaml.cs
 161.            }
 162.        }
 ```
->[!TIP]
+
 > 153.                processApp.StartInfo.FileName = @"Build\Name Game.exe"; Замените "Name Game.exe " на запуск вашей игры
 
 ```c#
@@ -237,15 +237,15 @@ MainWindow.xaml.cs
 413.                    }
 414.                }, cancellationToken);
 ```
->[!TIP]
+
 >391.  HttpRequestMessage httpRequestMessage = new HttpRequestMessage() { Method = HttpMethod.Get, RequestUri = new Uri("a link to download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too") }; Замените эту строку на "a link to >download the game (the main thing is that there is a file .zip with the name Build and the folder where the game will be too" на ссылку Google, ссылки прямые, чтобы установка начиналась сразу, вам понадобится Google drive API
 
 
 3. **GREAT** 
->[!TIP]
+
 >Готово! теперь ваш лаунчер готов к работе, измените дизайн, фон и так далее в xaml
 
-> [!WARNING]
+
 > Вы не можете изменить иконку Fish и логотип в верхней части
 
 
